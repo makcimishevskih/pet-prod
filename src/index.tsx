@@ -7,8 +7,6 @@ import { ErrorBoundary } from './app/providers/ErrorBoundary';
 import StoreProvider from './app/providers/StoreProvider/ui/StoreProvider';
 import App from './app/App';
 
-// resolveTsconfigPathsToAlias();
-
 render(
 	<StoreProvider>
 		<BrowserRouter>
@@ -21,3 +19,6 @@ render(
 	</StoreProvider>,
 	document.getElementById('root')
 );
+
+// LOKI VERSION
+// "loki": "^0.28.1";

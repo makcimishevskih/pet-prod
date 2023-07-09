@@ -8,12 +8,12 @@ module.exports = {
 		'airbnb',
 		'plugin:react/recommended',
 		'plugin:i18next/recommended',
-		'plugin:prettier/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'prettier',
-		'prettier/@typescript-eslint'
+		'plugin:prettier/recommended'
+		// 'prettier/@typescript-eslint'
 	],
-	// parser: '@typescript-eslint/parser',
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
@@ -29,7 +29,7 @@ module.exports = {
 		'@typescript-eslint'
 	],
 	rules: {
-		'prettier/prettier': ['error'],
+		// 'prettier/prettier': ['error'],
 
 		'eol-last': 'off',
 		indent: 'off',
