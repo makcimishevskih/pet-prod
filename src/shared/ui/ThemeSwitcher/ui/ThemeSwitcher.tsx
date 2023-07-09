@@ -1,24 +1,25 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React from 'react';
-import { Theme, useTheme } from 'app/providers/ThemeProvider';
+
+import { ThemeEnum, useTheme } from 'app/providers/ThemeProvider';
+
+import { Button, ButtonThemeEnum } from 'shared/ui/Button/Button';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
-    className?: string;
+	className?: string;
 }
 
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-    const { theme, toggleTheme } = useTheme();
+	const { theme, toggleTheme } = useTheme();
 
-    return (
-        <Button
-            theme={ButtonTheme.CLEAR}
-            className={classNames('', {}, [className])}
-            onClick={toggleTheme}
-        >
-            {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
-        </Button>
-    );
+	return (
+		<Button
+			theme={ButtonThemeEnum.CLEAR}
+			className={classNames('', {}, [className])}
+			onClick={toggleTheme}
+		>
+			{theme === ThemeEnum.DARK ? <DarkIcon /> : <LightIcon />}
+		</Button>
+	);
 };
