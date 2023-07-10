@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 import StoreProvider from '../ui/StoreProvider';
 import { MemoryRouter } from 'react-router-dom';
@@ -7,11 +7,11 @@ import { render, RenderResult } from '@testing-library/react';
 
 const renderWithProviders = (children: ReactNode): RenderResult => {
 	return render(
-		<MemoryRouter>
-			<StoreProvider>
+		<StoreProvider>
+			<MemoryRouter>
 				<ThemeProvider>{children}</ThemeProvider>
-			</StoreProvider>
-		</MemoryRouter>
+			</MemoryRouter>
+		</StoreProvider>
 	);
 };
 

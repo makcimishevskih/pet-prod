@@ -4,7 +4,7 @@ import { ButtonHTMLAttributes, FC } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
-export enum ButtonThemeEnum {
+export enum ButtonThemeE {
 	CLEAR = 'clear',
 	CLEAR_INVERTED = 'clearInverted',
 	OUTLINE = 'outline',
@@ -12,17 +12,17 @@ export enum ButtonThemeEnum {
 	BACKGROUND_INVERTED = 'backgroundInverted'
 }
 
-export enum ButtonSize {
-	M = 'size_m',
-	L = 'size_l',
-	XL = 'size_xl'
+export enum ButtonSizeE {
+	MEDIUM = 'size_m',
+	LARGE = 'size_l',
+	XLARGE = 'size_xl'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string;
-	theme?: ButtonThemeEnum;
+	theme?: ButtonThemeE;
 	square?: boolean;
-	size?: ButtonSize;
+	size?: ButtonSizeE;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
@@ -31,7 +31,7 @@ export const Button: FC<ButtonProps> = (props) => {
 		children,
 		theme,
 		square,
-		size = ButtonSize.M,
+		size = ButtonSizeE.MEDIUM,
 		...otherProps
 	} = props;
 

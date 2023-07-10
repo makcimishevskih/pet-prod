@@ -5,7 +5,7 @@ import { useCallback, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 
 import { Modal } from 'shared/ui/Modal/Modal';
-import { Button, ButtonThemeEnum } from 'shared/ui/Button/Button';
+import { Button, ButtonThemeE } from 'shared/ui/Button/Button';
 
 interface NavbarProps {
 	className?: string;
@@ -22,7 +22,7 @@ export const Navbar = ({ className }: NavbarProps) => {
 	return (
 		<div className={classNames(css.Navbar, {}, [className])}>
 			<Button
-				theme={ButtonThemeEnum.CLEAR_INVERTED}
+				theme={ButtonThemeE.CLEAR_INVERTED}
 				className={css.links}
 				onClick={onToggleModal}
 			>

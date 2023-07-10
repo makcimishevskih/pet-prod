@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ButtonSize, ButtonThemeEnum } from 'shared/ui/Button/Button';
+import { Button, ButtonSizeE, ButtonThemeE } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 
 import AboutIcon from 'shared/assets/icons/about-20-20.svg';
@@ -37,8 +37,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
 				data-testid='sidebar-toggle'
 				onClick={onToggle}
 				className={css.collapseBtn}
-				theme={ButtonThemeEnum.BACKGROUND_INVERTED}
-				size={ButtonSize.L}
+				theme={ButtonThemeE.BACKGROUND_INVERTED}
+				size={ButtonSizeE.LARGE}
 				square
 			>
 				{collapsed ? '>' : '<'}
